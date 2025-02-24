@@ -1,4 +1,4 @@
-package com.usuario.crud.models;
+package com.producto.crud.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,8 +7,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Entity
-@Table(name = "usuarios")
-public class UsuarioModel {
+@Table(name = "productos")
+public class productoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +29,7 @@ public class UsuarioModel {
     
     private String telefono;
     
-    public UsuarioModel() {
+    public productoModel() {
     }
 
 

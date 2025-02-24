@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    
+    <title>Lista de productos</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+
+    <div class="table_producto">
+        <h1>Lista de productos</h1>
+        <a th:href="@{/productos/nuevo}">Agregar Nuevo producto</a>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Tipo Documento</th>
+                    <th>Numero Documento</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+
+                    <th>Acciónes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="producto : ${productos}">
+                    <td th:text="${producto.id}"></td>
+                    <td th:text="${producto.nombre}"></td>
+                    <td th:text="${producto.tipoDocumento}"></td>
+                    <td th:text="${producto.numeroDocumento}"></td>
+                    <td th:text="${producto.email}"></td>
+                    <td th:text="${producto.telefono}"></td>
+                    <td>
+                        <a th:href="@{/productos/editar/{id}(id=${producto.id})}"><span class="material-symbols-outlined">edit</span></a>
+                        
+                        <form th:action="@{/productos/eliminar/{id}(id=${producto.id})}" method="post"
+                            style="display:inline;">
+                            <button type="submit"><span class="material-symbols-outlined">delete</span></button>
+                        </form>
+                        <form th:action="@{/productos/eliminar/{id}(id=${producto.id})}" method="post"
+                            style="display:inline;">
+                            <button type="submit"><span class="material-symbols-outlined">update</span></button>
+                        </form>
+
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Tipo Documento</th>
+                    <th>Numero Documento</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+
+                    <th>Acciónes</th>
+                </tr>
+            </tfoot>
+        </table>
+
+
+    </div>
+
+</body>
+
+</html>

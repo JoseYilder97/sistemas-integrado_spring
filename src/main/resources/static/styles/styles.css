@@ -173,11 +173,11 @@ input[type="submit"]:hover {
     z-index: 100;
 
 }
-.table_usuario{
+.table_producto{
     width: 80%;
     margin: 0 auto;
 }
-.table_usuario .table {
+.table_producto .table {
     width: 80%;
     margin: 0 auto;
     border-collapse: collapse;

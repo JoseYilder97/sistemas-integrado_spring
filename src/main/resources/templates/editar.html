@@ -2,15 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Editar Usuario</title>
+    <title>Editar producto</title>
     <link rel="stylesheet" href="../../static/styles/styles.css">
 </head>
 <body>
     <div class="container">
-        <a th:href="@{/usuarios}">Regresar</a>
+        <a th:href="@{/productos}">Regresar</a>
         <div class="formulari">
-            <h1>Editar Usuario nnnn</h1>
-            <form th:action="@{/usuarios/guardar}" th:object="${usuario}" method="POST">
+            <h1>Editar producto nnnn</h1>
+            <form th:action="@{/productos/guardar}" th:object="${producto}" method="POST">
                 <input type="hidden" th:field="*{id}"/>
 
                 <label for="nombre">

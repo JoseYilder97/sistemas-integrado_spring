@@ -2,15 +2,17 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario</title>
+    <title>Formulario de producto</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <div class="container">
-        <a th:href="@{/usuarios}">Regresar</a>
+        <a th:href="@{/productos}">Regresar</a>
+        <div th:if="${error}" th:text="${error}" style="color: red;"></div>
+        <div th:if="${success}" th:text="${success}" style="color: green;"></div>
         <div class="formulari">
             <h1>Regístrate</h1>
-            <form th:action="@{/usuarios/guardar}" th:object="${usuario}" method="POST">
+            <form th:action="@{/productos/guardar}" th:object="${producto}" method="POST">
                 <label for="nombre">
                     <span>Ingresa tu nombre</span>
                     <input type="text" id="nombre" th:field="*{nombre}" autocomplete="name" required>
