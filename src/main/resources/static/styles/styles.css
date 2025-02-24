@@ -1,0 +1,211 @@
+/* Estilos generales */
+:root {
+	--white: #ffffff;
+	--black: #000000;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+	--black-text: #0e1424;
+	--very-light-pink: #91968c;
+	--texte-input-gren: #00ff55;
+    --color-blue: #007bff;
+    --color-bootom-orange: #ff7b00;
+    --color-bootom-orange-hover: #954a03;
+
+    --trasparente-grey:rgba(255, 255, 255, 0.2);
+    --color-grey: rgb(49, 49, 49);
+	--hostital-green: #25f1e0;
+	--ms: 14px;
+	--md: 16px;
+	--lg: 18px;
+
+
+}
+
+html {
+    font-size: 62.5%;
+    -ms-text-size-adjust: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  
+  }
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	box-sizing: border-box;
+}
+.header{
+    background: var(--color-blue);
+    color: var(--white);
+    height: 9rem;
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+    backdrop-filter: blur(10px);
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1{
+
+    font-weight: 700;
+}
+
+.header .nav-links{
+    width: 90%;
+}
+.header .nav-links li{
+    list-style: none;
+}
+.header .nav-links li a{
+   text-decoration: none;
+   color: var(--white);
+    font-size: var(--md);
+}
+.container {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--color-blue), var(--color-grey));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+.container > a{
+    text-decoration: none;
+    font-size: var(--lg);
+    top: 1%;
+    left: 1%;
+    color: var(--white);
+    position: absolute;
+}
+.formulari {
+    background: var(--trasparente-grey);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 70%;
+    max-width: 700px;
+    color: var(--white);
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+span {
+    font-size: var(--md);
+    margin-bottom: 0.5rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="submit"] {
+    background: var(--color-bootom-orange);
+    color: var(--white);
+    width: 40%;
+    margin: 0 auto;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background: var(--color-bootom-orange-hover);
+
+}
+.main {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: var(--color-blue);
+    padding: var(--ms);
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 8rem;
+    position: relative; /* Se mantendrá abajo del contenido */
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    text-align: center;
+    
+
+    padding: 0;
+    z-index: 100;
+
+}
+.table_usuario{
+    width: 80%;
+    margin: 0 auto;
+}
+.table_usuario .table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table thead, .table tfoot{
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+.table th {
+    font-weight: bold;
+}

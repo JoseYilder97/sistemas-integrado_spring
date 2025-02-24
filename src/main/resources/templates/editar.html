@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="../../static/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <a th:href="@{/usuarios}">Regresar</a>
+        <div class="formulari">
+            <h1>Editar Usuario nnnn</h1>
+            <form th:action="@{/usuarios/guardar}" th:object="${usuario}" method="POST">
+                <input type="hidden" th:field="*{id}"/>
+
+                <label for="nombre">
+                    <span>Ingresa tu nombre</span>
+                    <input type="text" id="nombre" th:field="*{nombre}" autocomplete="name" required>
+                </label>
+
+                <label for="tipoDocumento">
+                    <span>Tipo de documento</span>
+                    <select id="tipoDocumento" th:field="*{tipoDocumento}">
+                        <option value="cc">CC</option>
+                        <option value="ce">CE</option>
+                        <option value="nit">NIT</option>
+                        <option value="pasaporte">PAS</option>
+                        <option value="ti">TI</option>
+                        <option value="cex">CEX</option>
+                        <option value="ptp">PTP</option>
+                        <option value="rc">RC</option>
+                    </select>
+                </label>
+
+                <label for="numeroDocumento">
+                    <span>Ingresa tu número de documento</span>
+                    <input type="number" id="numeroDocumento" th:field="*{numeroDocumento}" required>
+                </label>
+
+                <label for="email">
+                    <span>Ingresa tu email</span>
+                    <input type="email" id="email" th:field="*{email}" required>
+                </label>
+
+                <label for="telefono">
+                    <span>Ingresa tu teléfono</span>
+                    <input type="number" id="telefono" th:field="*{telefono}" required>
+                </label>
+
+                <input type="submit" value="Actualizar">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
